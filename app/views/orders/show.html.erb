@@ -7,7 +7,25 @@
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
   </div>
+<div>
+<% @items = LineItem.where(order_id: @order.id) %>
+<% @items.each do |item| %>
+<% product = Product.find_by(id: item.product_id) %>
+<tr>
+  <td>
+    <%= image_tag product.image.tiny.url %>
+  </td>
+  <td>
+    <h4><%= product.name %></h4>
+    <br>
+    <p><%= product.description %></p>
+    <h4><%= item.quantity%></h4>
+      </td>
+  <%end%>
+  <h4><%="$#{@order.total_cents / 100.00}"%></h4>
+  <h4><%=@order.email%></h4>
 
+</div>
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
