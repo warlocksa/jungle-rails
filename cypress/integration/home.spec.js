@@ -7,7 +7,8 @@ describe('jungle-rails', () => {
   it("There is products on the page", () => {
     cy.get(".products article").should("be.visible");
   });
-  it("There is 12 products on the page", () => {
+  
+  it("There is sold out bages on the page when quantity is zero", () => {
     cy.get(".products article").should("have.length", 12);
   }); 
 })
