@@ -8,10 +8,10 @@ describe('jungle-rails', () => {
   });
 
   it("There is sold out button when quantity is zero", () => {
-    cy.get("#sold-out").should("be.visible");
+    cy.get(".soldout").should("be.visible");
   });
 
   it("There is add button on the page", () => {
-    cy.get("#add-to-cart").should("be.visible");
+    cy.get(".add-to-cart").should("be.visible");
   });
 })
