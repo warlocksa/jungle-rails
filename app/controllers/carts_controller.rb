@@ -5,7 +5,7 @@ class CartsController < ApplicationController
       @user = User.find(session[:user_id])
     else
       @user={}
-      @user[:email] = "Kind@gmail.com"
+      @user[:email] = "visitor@gmail.com"
     end
   end
 
