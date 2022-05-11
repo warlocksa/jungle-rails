@@ -29,3 +29,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
+## jungle-rails
+
+The project in week 7 to week 8 about runy and rails. User can create account and select the products and pay the order. Admin can create the new category and product and destory the products as well.
+
+## Screenshot
