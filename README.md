@@ -35,3 +35,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 The project in week 7 to week 8 about runy and rails. User can create account and select the products and pay the order. Admin can create the new category and product and destory the products as well.
 
 ## Screenshot
+!["Screenshot of create product in new category"](https://github.com/warlocksa/jungle-rails/blob/master/docs/admin%20create%20product%20in%20new%20category.png)
+!["Screenshot of admin dashboard"](https://github.com/warlocksa/jungle-rails/blob/master/docs/admin%20dashboard.png)
+!["Screenshot of sold out badge on homepage"](https://github.com/warlocksa/jungle-rails/blob/master/docs/sold%20out%20badge%20on%20homepage.png)
+!["Screenshot of sold out badge on product detail page"](https://github.com/warlocksa/jungle-rails/blob/master/docs/sold%20out%20badge%20on%20product%20detail%20page.png)
