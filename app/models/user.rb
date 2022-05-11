@@ -1,11 +1,10 @@
 class User < ApplicationRecord
   has_secure_password
-  # link.user.try(:email)
-
-
-  validates_uniqueness_of :email
   
-  validates :email, presence: true
+
+  # validates_uniqueness_of :email
+  
+  validates :email, presence: true, uniqueness: { case_sensitive: false }
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :password, length: { minimum: 4 }, presence: true

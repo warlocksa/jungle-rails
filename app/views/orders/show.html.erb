@@ -23,7 +23,11 @@
       </td>
   <%end%>
   <h4><%="$#{@order.total_cents / 100.00}"%></h4>
+  <%if @order.email == 'visitor@gmail.com' %>
+  <h4>Visitor</h4>
+  <%else%>
   <h4><%=@order.email%></h4>
+  <%end%>
 
 </div>
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>

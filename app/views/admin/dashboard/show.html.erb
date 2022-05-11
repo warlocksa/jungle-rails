@@ -1,17 +1,17 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Dashboard</h1>
 
-<h2>
-number of products in stock
-<a href= "<%=admin_products_path %>">
-<%= @num_p %>
-</a>
-</h2>
+<div class="row">
+    <div class="card col-md-4">
+   <div class="card-body ">
+  <h2><%= link_to @num_p, [:admin, :products] , class: ""%> </h2>
+  </div>
+     <div class="card-footer "> Products </div>
 
-<h2>
-number of Categorys of products in stock
-<a href= "<%= root_path %>">
-<%= @num_c %>
-</a>
-</h2>
+   <div class="card-body ">
+  <h2><%= link_to @num_c, [:admin, :categories] , class: ""%> </h2>
+  </div>
+     <div class="card-footer "> Categories</div>
+</div>
+</div>
+
 

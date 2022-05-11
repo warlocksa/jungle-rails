@@ -13,10 +13,23 @@
         <span><%= @product.quantity %> in stock at </span>
         <span><%= "$ #{@product.price}" %></span>
       </div>
-      <div class="price">          
-        <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn' , method: :post do %>
-          <%= fa_icon "shopping-cart", text: 'Add' %>
-        <% end %> 
+      <%if @product.soldout? %>
+      <div class="price"> 
+      <button type="button" class="btn btn-danger soldout" >Sold Out</button>       
+        <div>
+    <%= button_to add_item_cart_path(product_id: @product.id), :disabled => true, class: 'btn add-cart-btn',
+    method: :post do %>
+      <%= fa_icon "shopping-cart", text: 'Add' %> 
+      <%end%>
+</div>
+            <%else%>
+  <div>
+    <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn' , id: 'add-cart-btn',
+    method: :post do %>
+      <%= fa_icon "shopping-cart", text: 'Add' %> 
+<%end%>
+    <%end%>
+  </div>
       
       </div>
     </div>
