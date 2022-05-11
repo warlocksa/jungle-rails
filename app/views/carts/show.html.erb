@@ -46,7 +46,11 @@
           data-name="Jungle"
           data-description="Khurram Virani's Jungle Order"
           data-locale="auto"
-          data-email="<%= @user[:email] %>"
+          <%if @user[:email] == 'Kind@gmail.com' %>
+            data-email="Visitor"
+          <%else%>
+            data-email="<%= @user[:email] %>"
+          <%end%>
           data-currency="cad">
         </script>
       <% end %>
